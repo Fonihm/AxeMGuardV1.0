@@ -38,29 +38,3 @@ The tracker records metadata inside an internal registry array, linking the allo
 
 ### 3. Leak Verification
 Upon completion, the tracking engine scans the unreleased registry rows. Any active memory blocks are flagged and outputted directly to the console.
-
----
-
-## 💻 USAGE EXAMPLE
-
-```c
-#include <stdio.h>
-#include "../Include/AxeM_Guard.h"
-
-// Enable memory tracking for the current file scope
-#define malloc(size) axem_malloc(size, __FILE__, __LINE__)
-#define free(ptr) axem_free(ptr)
-
-int main() {
-    printf("--- Test Program Started ---\n");
-
-    // Automatically redirected to axem_malloc
-    int* my_array = (int*)malloc(5 * sizeof(int)); 
-    
-    // Intentionally leaving a leak for demonstration...
-
-    check_leaks(); -- Trigger ledger scan before exit
-
-    printf("--- Test Program Ended ---\n");
-    return 0;
-}
