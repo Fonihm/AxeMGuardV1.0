@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/Fonihm/Fonihm/blob/main/Senko.gif?raw=true" alt="AxeM Logo" width="25%">
+  <img src="https://github.com/Fonihm/Fonihm/blob/main/Mine.jpg?raw=true" alt="AxeM Logo" width="25%">
 </p>
 
 <h1 align="center">AxeMGuard v1.0 </h1>
